@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: stock_visuals_flask
+    container_name: flask_stock
+    ports:
+      - "5005:5000"
+    volumes:
+      - .:/app
+    enviorment:
+      FLASK_DEBUG: "1"
