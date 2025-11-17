@@ -20,9 +20,10 @@
         <input type="submit" value="Generate">
     </form>
 
-    {% if chart_html %}
-        <div>{{ chart_html | safe }}</div>
+    {% if chart %}
+        <div>{{ chart | safe }}</div>
     {% endif % }
 </body>
+
 
 </html>
