@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stocks</title>
+</head>
+<body>
+    <form method="POST">
+        <label for="symbol">Symbol:</label>
+        <select name="symbol" id="symbol">
+        </select>
+
+        <label for="chart">Chart:</label>
+        <select name="chart" id="chart">
+        </select>
+
+        <label for="interval">Time:</label>
+        <select name="interval" id="interval">
+        </select>
+
+        <input type="submit" value="Generate">
+    </form>
+
+    {% if chart_html %}
+        <div>{{ chart_html | safe }}</div>
+    {% endif % }
+</body>
+
+</html>
